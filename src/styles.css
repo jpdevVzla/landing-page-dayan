@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'FuenteTitulo';
+    /* Utiliza la URL proporcionada por Google Fonts sin errores de comillas */
+    src: url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+  }
+  
+  .nombre-fuente {
+    font-family: 'FuenteTitulo', sans-serif;
+  }
+  
