@@ -1,0 +1,171 @@
+  @font-face {
+    font-family: 'Dancing Script';
+    src: url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet');
+  }
+  @font-face {
+    font-family: 'Pacifico', cursive;
+    src: url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Pacifico&display=swap');
+  }
+  
+  .nombre-fuente {
+    font-family: 'FuenteTitulo', sans-serif;
+  }
+
+  .links {
+    font-family: 'Arial', sans-serif;
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .links a {
+    color: #007BFF; /* Color del texto normal */
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 0.3s ease; /* Transición para el cambio de color */
+  }
+  
+  .links a:hover {
+    color: #FF4500; /* Color del texto al pasar el mouse */
+    font-weight: bold; /* Texto en negrita al pasar el mouse */
+    transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+  }
+  
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.social-icon:hover {
+  background-color: #212529;
+}
+
+.social-icon img {
+  width: 100%;
+  height: 100%;
+  filter: invert(100%);
+}
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-d {
+  width: 150px; /* Ajusta el tamaño del logo según sea necesario */
+  height: 150px;
+}
+
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  /* color: #fff; */
+  /* background-color: #333;  */
+  transition: background-color 0.3s ease; /* Agrega una transición para suavizar el cambio de color */
+}
+
+/* .header-text {
+  font-family: 'Dancing Script', cursive; 
+  color: #000; 
+} */
+
+
+.header.transparent {
+  background-color: transparent;  
+}
+
+.main-menu {
+  display: flex;
+}
+
+.menu-link {
+  font-family: 'Dancing Script', cursive; 
+  margin-right: 20px;
+  cursor: pointer;
+  font-size: xx-large;
+  margin-left: 4rem;
+}
+
+.sub-menu {
+  position: absolute;
+  top: 50px; /* Ajusta la posición vertical del submenú */
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 2px; /* Añade el borde redondo */
+  border: 2px solid #fff; /* Añade el borde blanco de 2px */
+  padding: 10px;
+  min-width: 15px; /* Ajusta el ancho mínimo del submenú según sea necesario */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.submenu-link {
+  color: #000000;
+  text-decoration: none;
+  margin-bottom: 5px;
+  padding: 8px 12px;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.submenu-link:hover {
+  background-color: #007BFF;
+}
+
+/* Estilo para el título del submenú */
+.sub-menu .menu-link {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.sub-menu-vertical {
+  position: absolute;
+  top: 100%; /* Ajusta la posición vertical del submenú */
+  right: 0;
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  opacity: 1;
+  border-radius: 2px;
+  border: 2px solid #fff;
+  padding: 10px;
+  min-width: 150px; /* Ajusta el ancho mínimo del submenú según sea necesario */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2; /* Asegura que el submenú se muestre por encima del contenido de la página */
+}
+
+
+
+.main-menu {
+  display: flex;
+  position: relative; /* Agregamos position: relative; al contenedor principal */
+  z-index: 1; /* Agregamos z-index: 1; para que el Aside no tape el contenido de la parte derecha */
+}
+/* Estilos para el modo noche */
+.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+/* Estilos para el modo claro */
+.light {
+  background-color: #fff;
+  color: #222;
+}
+
+
+

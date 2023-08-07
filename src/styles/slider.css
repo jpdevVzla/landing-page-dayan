@@ -1,0 +1,27 @@
+.item{
+    height: 40rem;
+    min-width: 30rem;
+    padding: 2rem;
+}
+.item img{
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+.slider{
+    display: flex;
+    cursor: grab;
+}
+.slider-container{
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+.item.hovered {
+    filter: brightness(90%);
+    transform: scale(1.1);
+  }
+  
+  .item.clicked {
+    filter: brightness(100%);
+    transform: scale(2);
+  }

@@ -1,24 +1,32 @@
+// Paginainicio.js
 import React from 'react';
-import { Button } from '@mui/material';
+//import { Button } from '@mui/material';
 import Header from './Header';
-import Footer from './Footer';
+//import Footer from './Footer';
+import Slider from './slider';
+import Slider2 from './slider2';
+import Aside from './Aside';
+import Darkmode from './Darkmode';
+import { useTheme } from './ThemeContext'; // Agregar esta línea
 
 const Paginainicio = () => {
+  const { isDarkMode } = useTheme(); // Obtener el estado del tema
+
   return (
-  <div>
-    <Header />
-    <div className='bg-stone-300 min-h-screen'>
-      <main>
-        <div className=''>
-          <h1 className='text-sky-500 mb-5'>Landing Page de la mejor esposa existente</h1>
-          <Button  variant="contained" color="primary">
-            Botón de Material-UI
-          </Button>
-        </div>
-      </main>
+    <div className={isDarkMode ? 'dark' : 'light'}>
+      <Header />
+      <Darkmode />
+            <div className='bg-white min-h-screen'>
+        <main className="main">
+          <Aside className="aside" />
+          <div className="w-3/4 flex flex-col">
+            <Slider className="" />
+            <Slider2 className="" />
+          </div>
+        </main>
+      </div>
+      {/* <Footer /> */}
     </div>
-    <Footer />
-  </div>
   );
 };
 
