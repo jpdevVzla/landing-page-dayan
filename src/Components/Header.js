@@ -1,3 +1,4 @@
+//Header.js
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import '../styles/styles.css';
@@ -29,8 +30,10 @@ const Header = () => {
         <NavLink to="/" className="menu-link">
           Inicio
         </NavLink>
-        <div className="menu-link" onClick={toggleSubMenuProducto} onMouseLeave={closeSubMenus}>
-          Productos
+        <div className="menu-link" onMouseEnter={toggleSubMenuProducto} onMouseLeave={closeSubMenus}>
+          <NavLink to="/portafolio" className="submenu-link" onClick={closeSubMenus}>
+            Portafolio
+          </NavLink>
           {isSubMenuProductoOpen && (
             <div className="sub-menu-vertical">
               
@@ -43,12 +46,29 @@ const Header = () => {
             </div>
           )}
         </div>
-        {/* Agrega los eventos onClick para "Contacto" y su submenú */}
-        <div className="menu-link" onClick={toggleSubMenuContacto} onMouseLeave={closeSubMenus}>
-          Contacto
+        <div className="menu-link" onMouseEnter={toggleSubMenuContacto} onMouseLeave={closeSubMenus}>
+          <NavLink to="/blog" className="submenu-link" onClick={closeSubMenus}>
+            Blog
+          </NavLink>
           {isSubMenuContactoOpen && (
             <div className="sub-menu-vertical">
               {/* Agrega las opciones del submenú de "Contacto" */}
+              <div className="submenu-link" onClick={closeSubMenus}>
+                Opción 1
+              </div>
+              <div className="submenu-link" onClick={closeSubMenus}>
+                Opción 2
+              </div>
+            </div>
+          )}
+        </div>
+        <div className="menu-link" onMouseEnter={toggleSubMenuContacto} onMouseLeave={closeSubMenus}>
+          <NavLink to="/contacto" className="submenu-link" onClick={closeSubMenus}>
+            Contacto
+          </NavLink>
+          {isSubMenuContactoOpen && (
+            <div className="sub-menu-vertical">
+              
               <div className="submenu-link" onClick={closeSubMenus}>
                 Opción 1
               </div>
